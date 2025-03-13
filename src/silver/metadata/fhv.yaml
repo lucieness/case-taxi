@@ -1,0 +1,8 @@
+columns:
+  ds_dispatching_base_number: "The TLC Base License Number of the base that dispatched the trip."
+  ts_pickup: "The date and time of the trip pick-up."
+  ts_dropoff: "The date and time of the trip dropoff."
+  id_pickup_location: "TLC Taxi Zone in which the trip began."
+  id_dropoff_location: "TLC Taxi Zone in which the trip ended."
+  fl_shared_trip: "Indicates if the trip was part of a shared ride chain offered by a High Volume FHV company. True = Shared trip, False = Not shared."
+  ds_affiliated_base_number: "The TLC Base License Number of the affiliated base (if different from the dispatching base)."
