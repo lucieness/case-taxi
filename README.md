@@ -200,9 +200,9 @@ Abaixo seguem as justificativas para as principais decisões técnicas:
 
 A modelagem de dados nas camadas **Silver** e **Gold** segue o padrão Fato/Dimensão. Abaixo está um diagrama que ilustra a estrutura das tabelas nas camadas Silver e Gold:
 
-![MER 1 - Camada Silver](mer_1.png)  
-![MER 2 - Camada Silver](mer_2.png)  
-![MER 3 - Camada Gold](mer_3.png)  
+![MER 1 - Camada Silver](readme_img/mer_1.png)  
+![MER 2 - Camada Silver](readme_img/mer_2.png)  
+![MER 3 - Camada Gold](readme_img/mer_3.png)  
 *(Diagramas gerados dentro do próprio databricks devido ao fato de utilização de constraints de PK e FK nas tabelas)*
 
 ### Camada Silver
@@ -268,3 +268,54 @@ Os metadados são armazenados em arquivos YAML para cada tabela, descrevendo a e
    - Utilize os notebooks na pasta `analysis/questions` (`perguntai.ipynb` e `pergunta2.ipynb`) para verificar as respostas para as perguntas realizadas no case.
    - Foi incluída uma célula final em cada notebook que plota um gráfico com os dados. Este passo é apenas opcional visto que é possível criar os gráficos pelo próprio Databricks, acrescentando um tipo de visualização nas células.
 
+   - **Resposta Pergunta 1**:
+
+      ##### Média do Valor Total por Mês
+
+      | Mês      | Média do Valor Total |
+      |----------|----------------------|
+      | 2023-01  | 27.02                |
+      | 2023-02  | 26.90                |
+      | 2023-03  | 27.80                |
+      | 2023-04  | 28.27                |
+      | 2023-05  | 28.96                |
+
+
+   ![Pergunta 1 - Dados](readme_img/resposta_p1_1.png)
+   ![Pergunta 1 - Gráfico](readme_img/resposta_p1_2.png)
+
+   - **Resposta Pergunta 2**:
+
+      ##### Média de Passageiros por Hora
+
+      | Hora | Média de Passageiros |
+      |------|----------------------|
+      | 0    | 1.4104              |
+      | 1    | 1.4192              |
+      | 2    | 1.4357              |
+      | 3    | 1.4333              |
+      | 4    | 1.3875              |
+      | 5    | 1.2648              |
+      | 6    | 1.2353              |
+      | 7    | 1.2523              |
+      | 8    | 1.2645              |
+      | 9    | 1.2825              |
+      | 10   | 1.3177              |
+      | 11   | 1.3330              |
+      | 12   | 1.3470              |
+      | 13   | 1.3540              |
+      | 14   | 1.3594              |
+      | 15   | 1.3710              |
+      | 16   | 1.3695              |
+      | 17   | 1.3624              |
+      | 18   | 1.3581              |
+      | 19   | 1.3682              |
+      | 20   | 1.3799              |
+      | 21   | 1.4004              |
+      | 22   | 1.4100              |
+      | 23   | 1.4056              |
+
+   *(Os valores foram arredondados para quatro casas decimais para melhor visualização.)*
+
+   ![Pergunta 2 - Dados](readme_img/resposta_p2_1.png)
+   ![Pergunta 2 - Gráfico](readme_img/resposta_p2_2.png)
