@@ -1,3 +1,10 @@
+comment: "Table of Rate Codes."
+primary_key: "id_rate_code"
+tags:
+    contains_pii: "False"
+    manual_update: "True"
 columns:
-  id_rate_code: "Id of the rate code."
-  ds_rate_code_name: "Name of the rate code."
+  id_rate_code:
+    comment: "A number that identifies the rate code."
+  ds_rate_code_name:
+    comment: "Name of the rate code."

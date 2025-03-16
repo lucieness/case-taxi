@@ -1,4 +1,10 @@
 comment: "Table of TLC Taxi Zone locations"
+primary_key: "id_location"
+tags:
+    contains_pii: "False"
+    manual_update: "True"
 columns:
-  id_location: "Id of the location."
-  ds_location_name: "Name of the location."
+  id_location:
+    comment: "Id of the location."
+  ds_location_name:
+    comment: "Name of the location."

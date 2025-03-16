@@ -1,3 +1,10 @@
+comment: "Table of LPEP or TPEP providers of records,"
+primary_key: "id_vendor"
+tags:
+    contains_pii: "False"
+    manual_update: "True"
 columns:
-  id_vendor: "A code indicating the LPEP or TPEP provider that provided the record."
-  ds_vendor_name: "Name of the provider."
+  id_vendor:
+    comment: "A number that identifies the provider."
+  ds_vendor_name:
+    comment: "Name of the provider."

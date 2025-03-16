@@ -1,4 +1,10 @@
-comment: "Table of Trip types available"
+comment: "Table of available Trip Types."
+primary_key: "id_trip_type"
+tags:
+    contains_pii: "False"
+    manual_update: "True"
 columns:
-  id_trip_type: "Id of the trip type."
-  ds_trip_type_name: "Name of the trip type."
+  id_trip_type:
+    comment: "A number that identifies the trip type."
+  ds_trip_type_name:
+    comment: "Name of the trip type."
