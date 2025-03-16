@@ -6,8 +6,8 @@ def remove_all_constraints(spark, table_name):
     df = spark.sql(f"DESCRIBE EXTENDED {table_name}")
     describe_data = df.collect()
     for row in describe_data:
-        if row["data_type"].lower().startswith("foreign key"):
-            spark.sql(f"ALTER TABLE {table_name} DROP CONSTRAINT {row['col_name']}")
+        if row["data_type"].lower().startswith("foreign key") or row["data_type"].lower().startswith("primary key"):
+            spark.sql(f"ALTER TABLE {table_name} DROP CONSTRAINT {row['col_name']} CASCADE")
     
 
 # método responsável por incluir os metadados de determinada tabela. 
