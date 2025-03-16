@@ -1,0 +1,10 @@
+comment: "Table of payment methods."
+primary_key: "id_payment_type"
+tags:
+    contains_pii: "False"
+    manual_update: "True"
+columns:
+  id_payment_type:
+    comment: "A number that identifies the payment type."
+  ds_payment_type_name:
+    comment: "Name/Description of the payment."

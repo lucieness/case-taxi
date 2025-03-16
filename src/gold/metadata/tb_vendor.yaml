@@ -1,0 +1,10 @@
+comment: "Tabela com os provedores de registros dos taxis LPEP e TPEP."
+primary_key: "id_vendor"
+tags:
+    contains_pii: "False"
+    manual_update: "True"
+columns:
+  id_vendor:
+    comment: "Campo numérico que identifica o provedor."
+  ds_vendor_name:
+    comment: "Nome do provedor."

@@ -1,0 +1,101 @@
+comment: "Trip records for YELLOW taxis, including vendor, location, payment, and fare details."
+foreign_keys:
+  - name: "fk_trip_vendor"
+    column: "id_vendor"
+    reference_table: "ifood_case.silver.tb_dim_vendor"
+    reference_column: "id_vendor"
+  - name: "fk_trip_rate_code"
+    column: "id_rate_code"
+    reference_table: "ifood_case.silver.tb_dim_rate_code"
+    reference_column: "id_rate_code"
+  - name: "fk_trip_pickup_location"
+    column: "id_pickup_location"
+    reference_table: "ifood_case.silver.tb_dim_location"
+    reference_column: "id_location"
+  - name: "fk_trip_dropoff_location"
+    column: "id_dropoff_location"
+    reference_table: "ifood_case.silver.tb_dim_location"
+    reference_column: "id_location"
+  - name: "fk_trip_payment_type"
+    column: "id_payment_type"
+    reference_table: "ifood_case.silver.tb_dim_payment_type"
+    reference_column: "id_payment_type"
+tags:
+  contains_pii: "False"
+  manual_update: "False"
+
+columns:
+  id_vendor:
+    comment: "A code indicating the TPEP provider that provided the record. It refers to tb_dim_vendor."
+
+  ts_pickup:
+    comment: "The date and time when the meter was engaged."
+
+  ts_dropoff:
+    comment: "The date and time when the meter was disengaged."
+
+  nb_passenger_count:
+    comment: "The number of passengers in the vehicle. This is a driver-entered value."
+
+  vl_trip_distance:
+    comment: "The elapsed trip distance in miles reported by the taximeter."
+
+  id_rate_code:
+    comment: "Id of the final rate code in effect at the end of the trip. It refers to tb_dim_rate_code."
+
+  fl_store_and_fwd:
+    comment: "Indicates whether the trip record was stored before sending to the vendor due to no connection. True = stored trip, False = real-time trip."
+
+  id_pickup_location:
+    comment: "Id of TLC Taxi Zone in which the taximeter was engaged. It refers to tb_dim_location."
+
+  id_dropoff_location:
+    comment: "Id of TLC Taxi Zone in which the taximeter was disengaged. It refers to tb_dim_location."
+
+  id_payment_type:
+    comment: "The id of the payment type that passenger used to pay."
+
+  vl_fare_amount:
+    comment: "The time-and-distance fare calculated by the meter."
+    tags:
+      unit: "currency"
+
+  vl_extra:
+    comment: "Miscellaneous extras and surcharges, including $0.50 and $1 rush hour and overnight charges."
+    tags:
+      unit: "currency"
+
+  vl_mta_tax:
+    comment: "$0.50 MTA tax that is automatically triggered based on the metered rate in use."
+    tags:
+      unit: "currency"
+
+  vl_tip_amount:
+    comment: "Tip amount – Automatically populated for credit card tips. Cash tips are not included."
+    tags:
+      unit: "currency"
+
+  vl_tolls_amount:
+    comment: "Total amount of all tolls paid in the trip."
+    tags:
+      unit: "currency"
+
+  vl_improvement_surcharge:
+    comment: "$0.30 improvement surcharge assessed at flag drop. Implemented in 2015."
+    tags:
+      unit: "currency"
+
+  vl_total_amount:
+    comment: "Total amount charged to passengers. Does not include cash tips."
+    tags:
+      unit: "currency"
+
+  vl_congestion_surcharge:
+    comment: "Total amount collected for NYS congestion surcharge."
+    tags:
+      unit: "currency"
+
+  vl_airport_fee:
+    comment: "$1.25 fee for pickups at LaGuardia and John F. Kennedy Airports."
+    tags:
+      unit: "currency"
