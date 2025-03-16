@@ -1,0 +1,3 @@
+columns:
+  id_rate_code: "Id of the rate code."
+  ds_rate_code_name: "Name of the rate code."

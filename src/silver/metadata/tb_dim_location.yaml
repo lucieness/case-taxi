@@ -1,0 +1,4 @@
+comment: "Table of TLC Taxi Zone locations"
+columns:
+  id_location: "Id of the location."
+  ds_location_name: "Name of the location."

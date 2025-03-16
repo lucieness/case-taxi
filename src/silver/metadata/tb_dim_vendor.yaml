@@ -1,0 +1,3 @@
+columns:
+  id_vendor: "A code indicating the LPEP or TPEP provider that provided the record."
+  ds_vendor_name: "Name of the provider."

@@ -1,0 +1,4 @@
+comment: "Table of Trip types available"
+columns:
+  id_trip_type: "Id of the trip type."
+  ds_trip_type_name: "Name of the trip type."
